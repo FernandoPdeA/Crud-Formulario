@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NodeJS</title>
+  <style>
+    h1 {
+      color: red;
+      text-align: center;
+      font-size: 60px;
+      background-color: black;
+      padding: 20px;
+    }
+
+    ul {
+      border: 5px solid black;
+      color: rgb(255, 0, 0);
+      font-size: 35px;
+      list-style: none;
+      padding: 0;
+      margin: 20px 1%;
+    }
+
+    li {
+      border: 1px solid black;
+      padding: 4px;
+      margin: 10px;
+    }
+
+    .botao {
+      margin: -20px 1%;
+      font-size: 20px;
+      font-family: 'Sansita One', cursive;
+      padding: 10px 1%;
+      border-radius: 4px;
+      background-color: green;
+      color: black;
+      cursor: pointer;
+    }
+
+    .botao:hover {
+      background-color: rgb(6, 71, 6);
+      font-size: 20.5px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Usuários cadastrados!</h1>
+  <button class="botao" id="botao">Retorne ao menu principal!</button>
+  <ul>
+    <% usuarios.forEach(function(usuarios) { %>
+      <li>
+        Id = <%= usuarios.id %>
+      </li>
+      <li>
+        Nome = <%= usuarios.nome %>
+      </li>
+      <li>
+        Sobrenome = <%= usuarios.sobrenome %>
+      </li>
+      <li>
+        Senha = <%= usuarios.senha %>
+      </li>
+      <li>
+        Confirmação de senha = <%= usuarios.confirmaSenha %>
+      </li>
+      <br>
+      <% }); %>
+  </ul>
+
+
+  <script>
+    document.getElementById('botao').onclick = function () {
+      location.href = '/';
+    }
+  </script>
+</body>
+
+</html>

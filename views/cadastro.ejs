@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <style>
+    .botao {
+      float: right;
+    }
+
+    .botao {
+      margin: 2px 4px;
+      font-size: 20px;
+      font-family: 'Sansita One', cursive;
+      padding: 10px 1%;
+      border-radius: 4px;
+      background-color: green;
+      color: white;
+      cursor: pointer;
+    }
+
+    .botao:hover {
+      background-color: #8b1212;
+      font-size: 20.5px;
+    }
+
+    h1 {
+      color: #444;
+      background-color: #fff;
+      border-bottom: 1px solid #d0d0d0;
+      font-size: 50px;
+      font-weight: lighter;
+      margin: 0 0 14px 0;
+      padding: 15px;
+    }
+
+    input {
+      padding: 5px 2%;
+      width: 50%;
+      height: 50px;
+      font-size: 20px;
+      border: none;
+      border-bottom: 1px solid #000;
+      outline: none;
+    }
+
+    input:hover {
+      background-color: rgb(241, 220, 220);
+    }
+
+    input[type="submit"] {
+      background-color: red;
+      color: white;
+      border: none;
+      margin-left: 2%;
+      margin-top: 20px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: rgb(146, 11, 11);
+      font-size: 25px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    Página de cadastro
+  </h1>
+  <form id="form" method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" placeholder="Nome...">
+    <br>
+    <label for="sobrenome">Sobrenome</label>
+    <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome...">
+    <br>
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" id="email" placeholder="E-mail...">
+    <br>
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha" id="senha" placeholder="Senha...">
+    <br>
+    <label for="confirmaSenha">Confirmação de senha:</label>
+    <input type="password" name="confirmaSenha" id="confirmaSenha" placeholder="Confirmação de senha...">
+    <br>
+    <input type="submit" value="Cadastrar">
+  </form>
+</body>
+
+</html>

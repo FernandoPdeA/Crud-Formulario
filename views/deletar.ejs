@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    form {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #444;
+      background-color: #fff;
+      border-bottom: 1px solid #d0d0d0;
+      font-size: 50px;
+      font-weight: lighter;
+      margin: 0 0 14px 0;
+      padding: 15px;
+    }
+
+    .botao {
+      margin: 2px 4px;
+      font-size: 20px;
+      font-family: 'Sansita One', cursive;
+      padding: 10px 1%;
+      border-radius: 4px;
+      background-color: green;
+      color: black;
+      cursor: pointer;
+    }
+
+    .botao:hover {
+      background-color: rgb(7, 73, 7);
+      color: white;
+      font-size: 20.5px;
+    }
+
+    input[type=text] {
+      width: 17%;
+      margin: 2px 4px;
+      font-size: 20px;
+      font-family: Arial;
+      padding: 4px 1%;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    input[type=text]:hover {
+      background-color: rgb(228, 180, 180);
+    }
+
+    input[type=submit] {
+      cursor: pointer;
+      font-size: 30px;
+      background-color: red;
+      color: black;
+      border-radius: 4px;
+    }
+
+    input[type=submit]:hover {
+      background-color: #8b1212;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Deletar Dados!</h1>
+  <button class="botao" id="botao">Retorne ao menu principal!</button>
+  <% usuarios.forEach(function(usuarios) { %>
+    <form method="post">
+      <input type="hidden" name="id" value="<%= usuarios.id %>">
+      <input style="font-size: 30px;" type="text" name="nome" value="<%= usuarios.nome %>">
+      <input style="font-size: 30px;" type="text" name="sobrenome" value="<%= usuarios.sobrenome %>">
+      <input style="font-size: 30px;" type="text" name="email" value="<%= usuarios.email %>">
+      <input style="font-size: 30px;" type="text" name="senha" value="<%= usuarios.senha %>">
+      <input style="font-size: 30px;" type="text" name="confirmaSenha" value="<%= usuarios.confirmaSenha %>">
+      <input type="submit" value="Deletar">
+    </form>
+    <% }); %>
+
+
+      <script>
+        document.getElementById('botao').onclick = function () {
+          location.href = '/';
+        }
+      </script>
+</body>
+
+</html>
